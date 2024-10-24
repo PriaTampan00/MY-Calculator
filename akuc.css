@@ -8,6 +8,12 @@ body{
     background-size: cover;
 }
 
+.SSS{
+    padding: 1%;
+    background-color: rgb(20, 20, 20);
+    border-radius: 20px;
+}
+
 #calculator{
     font-family: arial, sans-serif;
     background-color: hsl(0, 0%, 15%);
