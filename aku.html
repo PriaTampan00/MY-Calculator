@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="akuc.css">
+    <link rel="icon" href="/icon1.png">
+    <title>My Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" maxlength="5" id="display" class="display" disabled />
+        <div id="keys">
+            <button onclick="clearDisplay()" class="operator-btn bbut1">C</button>
+            <button onclick="factorial()" class="operator-btn2 bbut1">FAC</button>
+            <button onclick="appendToDisplay('%')" class="operator-btn2 bbut1">MOD</button>
+            <button onclick="appendToDisplay('**')" class="operator-btn bbut1">^</button>
+            
+            <button onclick="appendToDisplay('7')" class="bbut1">7</button>
+            <button onclick="appendToDisplay('8')" class="bbut1">8</button>
+            <button onclick="appendToDisplay('9')" class="bbut1">9</button>
+            
+            <button onclick="appendToDisplay('/')" class="operator-btn bbut1">/</button>
+            
+            <button onclick="appendToDisplay('4')" class="bbut1">4</button>
+            <button onclick="appendToDisplay('5')" class="bbut1">5</button>
+            <button onclick="appendToDisplay('6')" class="bbut1">6</button>
+            
+            <button onclick="appendToDisplay('*')" class="operator-btn bbut1">*</button>
+            
+            <button onclick="appendToDisplay('1')" class="bbut1">1</button>
+            <button onclick="appendToDisplay('2')" class="bbut1">2</button>
+            <button onclick="appendToDisplay('3')" class="bbut1">3</button>
+            <button onclick="appendToDisplay('+')" class="operator-btn bbut1">+</button>
+            
+            <button onclick="appendToDisplay('.')" class="bbut1">.</button>
+            <button onclick="appendToDisplay('0')" class="bbut1">0</button>
+            <button onclick="appendToDisplay('00')" class="bbut1">00</button>
+            
+            <button onclick="appendToDisplay('-')" class="operator-btn bbut1">-</button>
+            
+            
+        </div>
+        <div id="keys">
+            <button onclick="calculate()" class="bbut2">=</button>
+            <button onclick="deleteLast()" class="operator-btn2 bbut1">DEL</button>
+        </div>
+    </div>
+</body>
+    <script src="akuj.js"></script>
+    <script>
+
+        document.querySelectorAll('input[type="number]').forEach(input =>{
+            input.oninput = () =>{
+                if(input.value.lenght > input.maxLenght) input.value = input.value.slice(0, input.maxLenght);
+            };
+        });
+
+    </script>
+</html>
